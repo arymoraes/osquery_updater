@@ -24,9 +24,7 @@ func main() {
 		log.Fatalf("Error creating extension: %s\n", err)
 	}
 
-	fmt.Println("Creating software_update table")
-
-	table.CreateSoftwareUpdateTable(server)
+	table.SoftwareUpdate(server)
 
 	if err := server.Run(); err != nil {
 		log.Fatalln(err)
